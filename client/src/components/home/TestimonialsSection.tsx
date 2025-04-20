@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { fadeInUp, staggerContainer } from "@/utils/animations";
+import wardrobePath from "@assets/4-wardrobe-Photoroom.png-Photoroom.png";
 
 const TestimonialsSection = () => {
   const controls = useAnimation();
@@ -45,18 +46,34 @@ const TestimonialsSection = () => {
       className="wt-home-section py-20 md:py-32 bg-[#E8CFC2] bg-opacity-20"
     >
       <div className="wt-home-container">
-        <motion.div 
-          className="text-center mb-16"
-          variants={fadeInUp}
-          initial="hidden"
-          animate={controls}
-        >
-          <h2 className="text-4xl md:text-5xl mb-4">What Our Users Say</h2>
-          <div className="w-20 h-1 bg-[#E8CFC2] mx-auto mb-8"></div>
-          <p className="text-lg max-w-3xl mx-auto">
-            Join thousands of fashion enthusiasts who are already transforming how they shop with Woreto.
-          </p>
-        </motion.div>
+        <div className="flex flex-col md:flex-row items-center gap-12 mb-16">
+          <motion.div 
+            className="w-full md:w-1/2 text-center md:text-left"
+            variants={fadeInUp}
+            initial="hidden"
+            animate={controls}
+          >
+            <h2 className="text-4xl md:text-5xl mb-4">What Our Users Say</h2>
+            <div className="w-20 h-1 bg-[#E8CFC2] mx-auto md:mx-0 mb-8"></div>
+            <p className="text-lg max-w-3xl">
+              Join thousands of fashion enthusiasts who are already transforming how they shop with Woreto. Our wardrobe management feature helps you organize your clothes and plan your outfits.
+            </p>
+          </motion.div>
+          
+          <motion.div 
+            className="w-full md:w-1/2"
+            variants={fadeInUp}
+            initial="hidden"
+            animate={controls}
+            transition={{ delay: 0.2 }}
+          >
+            <img 
+              src={wardrobePath} 
+              alt="Woreto wardrobe feature" 
+              className="w-auto h-[500px] mx-auto rounded-3xl shadow-xl"
+            />
+          </motion.div>
+        </div>
         
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-3 gap-8"

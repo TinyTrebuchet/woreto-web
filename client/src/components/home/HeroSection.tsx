@@ -3,7 +3,7 @@ import { FaChevronDown } from "react-icons/fa";
 import { scrollTo } from "@/utils/scrollTo";
 import { fadeIn, fadeInUp } from "@/utils/animations";
 import DownloadButton from "./DownloadButton";
-import logoPath from "@assets/logo.jpg";
+import homescreenPath from "@assets/1-homepage-Photoroom.png-Photoroom.png";
 
 const HeroSection = () => {
   return (
@@ -18,45 +18,52 @@ const HeroSection = () => {
       </div>
       
       <div className="wt-home-container z-10">
-        <div className="flex flex-col items-center text-center md:text-left md:items-start max-w-4xl mx-auto">
-          <motion.img 
-            src={logoPath} 
-            alt="Woreto Logo" 
-            className="h-32 md:h-40 mb-8"
-            variants={fadeInUp}
-            initial="hidden"
-            animate="visible"
-          />
+        <div className="flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto">
+          <div className="text-center md:text-left max-w-2xl mb-10 md:mb-0">
+            <motion.h1 
+              className="wt-home-tagline text-4xl md:text-5xl lg:text-6xl font-light text-[#E8CFC2] mb-6 font-['Playfair_Display'] italic"
+              variants={fadeInUp}
+              initial="hidden"
+              animate="visible"
+              transition={{ delay: 0.2 }}
+            >
+              Compare, Style, Save – Your Fashion, Your Price!
+            </motion.h1>
+            
+            <motion.p 
+              className="text-lg md:text-xl text-gray-100 max-w-lg mb-10"
+              variants={fadeInUp}
+              initial="hidden"
+              animate="visible"
+              transition={{ delay: 0.3 }}
+            >
+              Discover the smartest way to shop fashion across multiple platforms, manage your wardrobe, and never miss a deal again.
+            </motion.p>
+            
+            <motion.div 
+              className="flex flex-col sm:flex-row gap-4"
+              variants={fadeInUp}
+              initial="hidden"
+              animate="visible"
+              transition={{ delay: 0.4 }}
+            >
+              <DownloadButton platform="ios" />
+              <DownloadButton platform="android" style="secondary" />
+            </motion.div>
+          </div>
           
-          <motion.h1 
-            className="wt-home-tagline text-3xl md:text-5xl lg:text-6xl font-light italic text-[#E8CFC2] mb-6"
-            variants={fadeInUp}
-            initial="hidden"
-            animate="visible"
-            transition={{ delay: 0.2 }}
-          >
-            Compare, Style, Save – Your Fashion, Your Price!
-          </motion.h1>
-          
-          <motion.p 
-            className="text-lg md:text-xl text-gray-100 max-w-2xl mb-10"
+          <motion.div
+            className="w-full md:w-1/2 flex justify-center"
             variants={fadeInUp}
             initial="hidden"
             animate="visible"
             transition={{ delay: 0.3 }}
           >
-            Discover the smartest way to shop fashion across multiple platforms, manage your wardrobe, and never miss a deal again.
-          </motion.p>
-          
-          <motion.div 
-            className="flex flex-col sm:flex-row gap-4"
-            variants={fadeInUp}
-            initial="hidden"
-            animate="visible"
-            transition={{ delay: 0.4 }}
-          >
-            <DownloadButton platform="ios" />
-            <DownloadButton platform="android" style="secondary" />
+            <img 
+              src={homescreenPath} 
+              alt="Woreto App Screenshot" 
+              className="w-auto h-[500px] md:h-[600px] rounded-3xl shadow-2xl"
+            />
           </motion.div>
         </div>
       </div>

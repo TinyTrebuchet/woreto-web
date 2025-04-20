@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { FaSearch, FaTshirt, FaTag } from "react-icons/fa";
 import { fadeInUp, staggerContainer } from "@/utils/animations";
+import storesPath from "@assets/2-stores-Photoroom.png-Photoroom.png";
 
 const AboutSection = () => {
   const controls = useAnimation();
@@ -87,14 +88,9 @@ const AboutSection = () => {
             >
               <div className="relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1571648059602-3dce9f0b31fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=900&q=80" 
-                  alt="Woreto app screenshot" 
+                  src={storesPath} 
+                  alt="Woreto stores page" 
                   className="wt-home-app-screen h-[500px] rounded-3xl shadow-lg z-10 relative"
-                />
-                <img 
-                  src="https://images.unsplash.com/photo-1583744946564-b52ac1c389c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=900&q=80" 
-                  alt="Woreto app screenshot" 
-                  className="wt-home-app-screen h-[500px] rounded-3xl shadow-lg absolute -left-20 -bottom-10 -rotate-6 z-0 hidden md:block"
                 />
               </div>
             </motion.div>

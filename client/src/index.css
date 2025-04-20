@@ -67,7 +67,8 @@
 
   /* Custom cursive styling for the tagline */
   .wt-home-tagline {
-    font-family: 'Italiana', cursive;
+    font-family: 'Pinyon Script', cursive;
+    letter-spacing: 0.02em;
   }
 }
 

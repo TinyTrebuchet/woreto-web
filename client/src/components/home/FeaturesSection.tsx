@@ -8,6 +8,7 @@ import {
   FaCheck 
 } from "react-icons/fa";
 import { fadeInUp, staggerContainer } from "@/utils/animations";
+import shoesPath from "@assets/3-shoes-Photoroom.png-Photoroom.png";
 
 const FeaturesSection = () => {
   const controls = useAnimation();
@@ -118,11 +119,10 @@ const FeaturesSection = () => {
             
             <div className="w-full lg:w-1/2 relative">
               <img 
-                src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                alt="Fashion shopping comparison" 
-                className="w-full h-full object-cover"
+                src={shoesPath} 
+                alt="Price comparison in Woreto app" 
+                className="w-full h-full object-contain p-4"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent lg:bg-gradient-to-l"></div>
             </div>
           </div>
         </motion.div>
