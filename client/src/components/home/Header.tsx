@@ -33,12 +33,12 @@ const Header = () => {
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
         className={`fixed w-full z-50 transition-all duration-300 ${
-          isScrolled ? "bg-black/90 backdrop-blur-sm py-3" : "bg-transparent py-4"
+          isScrolled ? "bg-black/90 backdrop-blur-sm py-3" : "bg-black/80 backdrop-blur-sm py-4"
         }`}
       >
         <div className="wt-home-container flex justify-between items-center">
           <a href="#" className="wt-home-logo flex items-center">
-            <img src={logoPath} alt="Woreto Logo" className="h-12" />
+            <img src={logoPath} alt="Woreto Logo" className="h-10 md:h-12" />
           </a>
           
           <nav className="hidden md:flex space-x-8">

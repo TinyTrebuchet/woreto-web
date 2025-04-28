@@ -90,7 +90,7 @@ const AboutSection = () => {
                 <img 
                   src={storesPath} 
                   alt="Woreto stores page" 
-                  className="wt-home-app-screen h-[500px] rounded-3xl shadow-lg z-10 relative"
+                  className="wt-home-app-screen h-[500px] rounded-3xl z-10 relative"
                 />
               </div>
             </motion.div>

@@ -65,10 +65,11 @@
     @apply bg-white rounded-2xl p-8 shadow-sm transition-all duration-300 hover:scale-[1.02];
   }
 
-  /* Custom cursive styling for the tagline */
+  /* Elegant styling for the tagline */
   .wt-home-tagline {
-    font-family: 'Pinyon Script', cursive;
-    letter-spacing: 0.02em;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    letter-spacing: 0.01em;
   }
 }
 
